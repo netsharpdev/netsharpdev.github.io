@@ -2,7 +2,6 @@
 layout: page
 title: About me
 description: Couple of words about me and the reason why I write.
-banner_image: aboutPage.jpg
 ---
 
 ### Contact me

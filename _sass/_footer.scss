@@ -1,0 +1,128 @@
+// =============================================================================
+// Footer
+// =============================================================================
+
+.footer {
+  border-top: 1px solid transparent;
+  background-image: linear-gradient($bg-primary, $bg-primary),
+                    $gradient-accent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  padding: $space-3xl 0 $space-xl;
+}
+
+.footer__inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $space-lg;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: $space-3xl;
+}
+
+.footer__title {
+  font-size: $fs-lg;
+  font-weight: 700;
+  color: $text-white;
+  margin-bottom: $space-md;
+}
+
+.footer__text {
+  color: $text-muted;
+  font-size: $fs-sm;
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+.footer__heading {
+  font-size: $fs-xs;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-muted;
+  margin-bottom: $space-lg;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: $space-sm;
+  }
+
+  a {
+    color: $text-body;
+    font-size: $fs-sm;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $accent-cyan;
+    }
+  }
+}
+
+.footer__social {
+  display: flex;
+  gap: $space-md;
+  margin-top: $space-md;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-md;
+  border: 1px solid $border-subtle;
+  color: $text-body;
+  transition: all $transition-base;
+
+  &:hover {
+    border-color: $accent-cyan;
+    color: $accent-cyan;
+    background: rgba($accent-cyan, 0.1);
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+}
+
+.footer__bottom {
+  max-width: $container-max;
+  margin: $space-2xl auto 0;
+  padding: $space-lg $space-lg 0;
+  border-top: 1px solid $border-subtle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $text-muted;
+  font-size: $fs-xs;
+
+  a {
+    color: $text-muted;
+
+    &:hover {
+      color: $accent-cyan;
+    }
+  }
+}
+
+@media (max-width: $bp-md) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: $space-md;
+    text-align: center;
+  }
+}

@@ -1,82 +1,79 @@
 ---
 layout: default
 ---
-<div class="site-content">
-    <div class="inner">
-        <main class="site-main">
-            <article class="post">
-                <header class="entry-header"> 
-                    <div class="entry-header-wrap">
-                        {% if page.banner_image %}
-                        <div class="post-thumbnail">
-                            <img src="{{ "/images/posts/" | append: page.banner_image | prepend: site.baseurl }}" alt="{% if page.banner_image_alt %}{{ page.banner_image_alt }}{% else %}{{ page.title }}{% endif %}">
-                        </div><!-- .post-thumbnail -->
-                        {% endif %}
-                        <h1 class="entry-title">{{page.title}}</h1>
-                    </div><!-- .entry-header-wrap -->
-                    <div class="entry-meta">
-                        by <span class="post-author">{{site.author_name}}</span> on <time class="published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-                    </div><!-- .entry-meta -->
-                </header><!-- .entry-header -->
-                <div class="entry-content">
-                    {{content}}
-                </div><!-- .entry-content -->
-                <footer class="entry-footer">
-                    <div class="share-post">
-                        <span>Share</span>
-                        <a class="fa-twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&amp;url={{ site.url }}{{ page.url }}"><span class="screen-reader-text">Twitter</span></a>
-                        <a class="fa-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&amp;t={{ page.title | uri_escape }}"><span class="screen-reader-text">Facebook</span></a>
-                        <a class="fa-google-plus" target="_blank" href="http://plus.google.com/share?url={{ site.url }}{{ page.url }}"><span class="screen-reader-text">Google+</span></a>
-                    </div><!-- .share-post -->
-                    {% if page.tags.size > 0 %}
-                    <div class="tag-links">
-                        Tags: {% for tag in page.tags %}<a href="{{ site.baseurl }}/tags/index.html#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} {% endunless %}{% endfor %}
-                    </div>
-                    {% endif %}
-                </footer><!-- .entry-footer -->
-            </article><!-- .post -->
-            <div class="author-box">
-                <div class="author-info">
-                    <div class="author-avatar" style="background-image: url({{ site.author_image }})"><span class="screen-reader-text">{{ site.author_name }}'s Picture</span></div>
-                    <div class="author-details">
-                        <h2 class="author-title">About {{ site.author_name }}</h2>
-                        <p class="author-bio">{{ site.author_bio }}</p>
-                        <span class="author-location"><i class="fa-map-marker" aria-hidden="true"></i> {{ site.author_location }}</span>
-                        <span class="author-website"><i class="fa-chain" aria-hidden="true"></i> <a href="{{ site.author_url }}" target="_blank"> {{ site.author_url }}</a></span>
-                    </div><!-- .author-details -->
-                </div><!-- .author-info -->
-            </div><!-- .author-box -->
-            <nav class="post-navigation">
-                <h2 class="screen-reader-text">Post navigation</h2>
-                {% if page.previous.url %}
-                <div class="nav-previous">
-                    <div class="nav-inside">
-                        {% if page.previous.banner_image %}
-                        <a href="{{ site.baseurl }}{{page.previous.url}}" class="nav-thumb" style="background-image: url({{ "/images/posts/" | append: page.previous.banner_image }})"></a>
-                        {% endif %}
-                        <div class="nav-before">Previous</div>
-                        <div class="nav-title"><a href="{{ site.baseurl }}{{page.previous.url}}">{{page.previous.title}}</a></div>
-                        <div class="nav-date">{{page.previous.date | date: "%B %-d, %Y"}}</div>
-                    </div><!-- .nav-inside -->
-                </div><!-- .nav-previous -->
-                {% endif %}
-                {% if page.next.url %}
-                <div class="nav-next">
-                    <div class="nav-inside">
-                        {% if page.next.banner_image %}
-                        <a href="{{ site.baseurl }}{{page.next.url}}" class="nav-thumb" style="background-image: url({{ "/images/posts/" | append: page.next.banner_image }})"></a>
-                        {% endif %}
-                        <div class="nav-before">Next</div>
-                        <div class="nav-title"><a href="{{ site.baseurl }}{{page.next.url}}">{{page.next.title}}</a></div>
-                        <div class="nav-date">{{page.next.date | date: "%B %-d, %Y"}}</div>
-                    </div><!-- .nav-inside -->
-                </div><!-- .nav-next -->
-                {% endif %}
-            </nav><!-- .post-navigation -->
-            {% if site.disqus %}
-                {% include disqus.html %}
+<article>
+    <header class="post-header">
+        <div class="container">
+            {% if page.tags.size > 0 %}
+            <div class="post-header__tags">
+                {% for tag in page.tags %}
+                <a href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" class="tag-pill">{{ tag }}</a>
+                {% endfor %}
+            </div>
             {% endif %}
-        </main><!-- .site-main -->
-        {% include sidebar.html %}
-    </div><!-- .inner -->
-</div><!-- .site-content -->
+            <h1 class="post-header__title">{{ page.title }}</h1>
+            <div class="post-header__meta">
+                <div class="post-header__author">
+                    <img src="{{ site.author_image }}" alt="{{ site.author_name }}" class="post-header__avatar">
+                    <span class="post-header__author-name">{{ site.author_name }}</span>
+                </div>
+                <time class="post-header__date" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+                <span class="post-header__readtime">{% assign words = page.content | number_of_words %}{% assign mins = words | divided_by: 200 %}{% if mins < 1 %}1{% else %}{{ mins }}{% endif %} min read</span>
+            </div>
+        </div>
+    </header>
+
+    {% if page.banner_image %}
+    <div class="post-banner">
+        <img src="{{ "/images/posts/" | append: page.banner_image | prepend: site.baseurl }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    <footer class="post-footer">
+        {% if page.tags.size > 0 %}
+        <div class="post-tags">
+            {% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" class="tag-pill">{{ tag }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="author-card">
+            <img src="{{ site.author_image }}" alt="{{ site.author_name }}" class="author-card__avatar">
+            <div>
+                <div class="author-card__name">{{ site.author_name }}</div>
+                <p class="author-card__bio">{{ site.author_bio }}</p>
+                <span class="author-card__location">{{ site.author_location }}</span>
+            </div>
+        </div>
+
+        <nav class="post-nav">
+            {% if page.previous.url %}
+            <a href="{{ site.baseurl }}{{ page.previous.url }}" class="post-nav__item">
+                <span class="post-nav__label">&larr; Previous</span>
+                <span class="post-nav__title">{{ page.previous.title }}</span>
+            </a>
+            {% else %}
+            <div></div>
+            {% endif %}
+            {% if page.next.url %}
+            <a href="{{ site.baseurl }}{{ page.next.url }}" class="post-nav__item post-nav__item--next">
+                <span class="post-nav__label">Next &rarr;</span>
+                <span class="post-nav__title">{{ page.next.title }}</span>
+            </a>
+            {% else %}
+            <div></div>
+            {% endif %}
+        </nav>
+    </footer>
+
+    {% if site.disqus %}
+    <div class="comments-area">
+        {% include disqus.html %}
+    </div>
+    {% endif %}
+</article>

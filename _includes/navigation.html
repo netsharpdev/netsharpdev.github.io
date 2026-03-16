@@ -1,0 +1,17 @@
+<nav class="nav" id="top">
+    <div class="nav__inner">
+        <a href="{{ site.baseurl }}/" class="nav__logo">net<span>sharp</span>dev</a>
+        <ul class="nav__links" id="nav-links">
+            {% for link in site.navigation %}
+            <li>
+                <a href="{{ link.url }}" class="nav__link {% if page.url == link.url %}nav__link--active{% endif %}">{{ link.text }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>

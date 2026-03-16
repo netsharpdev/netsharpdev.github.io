@@ -1,0 +1,144 @@
+// =============================================================================
+// Navigation
+// =============================================================================
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: $nav-height;
+  background: rgba($bg-primary, 0.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $border-subtle;
+  transition: background $transition-base;
+}
+
+.nav__inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $space-lg;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-size: $fs-lg;
+  font-weight: 700;
+  color: $text-white;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+
+  &:hover {
+    color: $text-white;
+  }
+
+  span {
+    color: $accent-cyan;
+  }
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: $space-xl;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  font-size: $fs-sm;
+  font-weight: 500;
+  color: $text-body;
+  text-decoration: none;
+  transition: color $transition-fast;
+  position: relative;
+
+  &:hover,
+  &--active {
+    color: $text-white;
+  }
+
+  &--active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: $gradient-accent;
+    border-radius: 1px;
+  }
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: $text-white;
+    border-radius: 1px;
+    transition: all $transition-base;
+  }
+}
+
+.nav__toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav__toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav__toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+// Mobile nav
+@media (max-width: $bp-md) {
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__links {
+    display: none;
+    position: absolute;
+    top: $nav-height;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba($bg-primary, 0.95);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid $border-subtle;
+    padding: $space-lg;
+    gap: 0;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  .nav__link {
+    padding: $space-md 0;
+    font-size: $fs-base;
+    border-bottom: 1px solid $border-subtle;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &--active::after {
+      display: none;
+    }
+  }
+}

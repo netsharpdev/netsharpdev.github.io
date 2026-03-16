@@ -1,0 +1,82 @@
+// =============================================================================
+// Utilities
+// =============================================================================
+
+.gradient-text {
+  background: $gradient-accent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tag-pill {
+  display: inline-block;
+  background: rgba($accent-cyan, 0.1);
+  color: $accent-cyan;
+  font-size: $fs-xs;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: $radius-full;
+  border: 1px solid rgba($accent-cyan, 0.2);
+  text-decoration: none;
+  transition: all $transition-base;
+
+  &:hover {
+    background: rgba($accent-cyan, 0.2);
+    color: $accent-cyan;
+    border-color: rgba($accent-cyan, 0.4);
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-size: $fs-sm;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 1.75rem;
+  border-radius: $radius-md;
+  text-decoration: none;
+  transition: all $transition-base;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: $gradient-accent;
+  color: $bg-primary;
+
+  &:hover {
+    box-shadow: $shadow-glow-cyan;
+    transform: translateY(-1px);
+    color: $bg-primary;
+  }
+}
+
+.btn--ghost {
+  background: transparent;
+  color: $text-white;
+  border: 1px solid $border-light;
+
+  &:hover {
+    border-color: $accent-cyan;
+    color: $accent-cyan;
+    box-shadow: $shadow-glow-cyan;
+    transform: translateY(-1px);
+  }
+}
+
+.label {
+  display: inline-block;
+  font-family: $font-mono;
+  font-size: $fs-xs;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $accent-cyan;
+  margin-bottom: $space-md;
+}
+
+.text-center { text-align: center; }
+.text-muted { color: $text-muted; }
+.mb-0 { margin-bottom: 0; }

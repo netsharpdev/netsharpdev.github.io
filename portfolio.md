@@ -2,7 +2,6 @@
 layout: page
 title: Portfolio
 description: These are projects I have created or worked on in my career.
-banner_image: portfolio.jpg
 ---
 
 
@@ -33,7 +32,7 @@ While I was been working for Sii Poland I was delegated to ABB Global Business S
 
 Talmundo's employee onboarding solution helps you easily build an inspiring onboarding journey for your employees.
 Our software blends HR best practices with your company's culture to deliver a great onboarding experience that will positively impact your business by getting your hires up and running and integrated faster. That's onboarding for the new digital world!
-Keep scrolling to see some highlights from an example digital journey as experienced by a new hire. 
+Keep scrolling to see some highlights from an example digital journey as experienced by a new hire.
 As a consultant and backend developer I was responsible for coordinating DevOps and creating this application for over 3 years.
 
 ---

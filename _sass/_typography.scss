@@ -1,0 +1,104 @@
+// =============================================================================
+// Typography
+// =============================================================================
+
+h1, h2, h3, h4, h5, h6 {
+  color: $text-white;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+h1 { font-size: $fs-4xl; }
+h2 { font-size: $fs-3xl; }
+h3 { font-size: $fs-2xl; }
+h4 { font-size: $fs-xl; }
+h5 { font-size: $fs-lg; }
+h6 {
+  font-size: $fs-sm;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+p {
+  margin: 0 0 1.5rem;
+}
+
+blockquote {
+  border-left: 3px solid $accent-cyan;
+  color: $text-white;
+  font-size: $fs-lg;
+  font-style: italic;
+  line-height: 1.8;
+  margin: 0 0 1.5rem;
+  padding-left: 1.5rem;
+
+  cite, small {
+    color: $text-muted;
+    font-size: $fs-sm;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+mark {
+  background: rgba($accent-cyan, 0.2);
+  color: $text-white;
+  padding: 0 3px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: $border-subtle;
+  margin: 2rem 0;
+}
+
+table {
+  font-size: $fs-sm;
+  margin-bottom: 1.5rem;
+}
+
+th, td {
+  border: 1px solid $border-light;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+th {
+  background: $bg-card;
+  color: $text-white;
+  font-weight: 600;
+}
+
+td {
+  background: $bg-secondary;
+}
+
+strong {
+  color: $text-white;
+}
+
+code {
+  font-family: $font-mono;
+  font-size: 0.9em;
+  background: $bg-card;
+  color: $accent-cyan;
+  padding: 0.15em 0.4em;
+  border-radius: $radius-sm;
+}
+
+pre {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+
+  code {
+    background: none;
+    padding: 0;
+    color: inherit;
+    font-size: $fs-sm;
+  }
+}

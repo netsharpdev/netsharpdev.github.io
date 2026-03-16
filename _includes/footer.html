@@ -1,44 +1,49 @@
-<footer class="site-footer">
-    <div class="inner">
-        <div class="social-links">
-            {% if site.twitter_username %}
-            <a href="https://twitter.com/{{ site.twitter_username }}" class="fa-twitter square fill-horizontal"><span class="screen-reader-text">Twitter</span></a>
-            {% endif %}
-            {% if site.facebook_username %}
-            <a href="https://www.facebook.com/{{ site.facebook_username }}" class="fa-facebook square fill-horizontal"><span class="screen-reader-text">Facebook</span></a>
-            {% endif %}
-            {% if site.googleplus_username %}
-            <a href="https://plus.google.com/{{ site.googleplus_username }}" class="fa-google-plus square fill-horizontal"><span class="screen-reader-text">Google+</span></a>
-            {% endif %}
-            {% if site.github_username %}
-            <a href="https://github.com/{{ site.github_username }}" class="fa-github-alt square fill-horizontal"><span class="screen-reader-text">GitHub</span></a>
-            {% endif %}
-            {% if site.codepen_username %}
-            <a href="http://codepen.io/{{ site.codepen_username }}" class="fa-codepen square fill-horizontal"><span class="screen-reader-text">CodePen</span></a>
-            {% endif %}
-            {% if site.dribbble_uername %}
-            <a href="https://dribbble.com/{{ site.dribbble_uername }}" class="fa-dribbble square fill-horizontal"><span class="screen-reader-text">Dribbble</span></a>
-            {% endif %}
-            {% if site.medium_username %}
-            <a href="https://medium.com/{{ site.medium_username }}" class="fa-medium square fill-horizontal"><span class="screen-reader-text">Medium</span></a>
-            {% endif %}
-            {% if site.instagram_username %}
-            <a href="http://instagram.com/{{ site.instagram_username }}" class="fa-instagram square fill-horizontal"><span class="screen-reader-text">Instagram</span></a>
-            {% endif %}
-            {% if site.pinterest_username %}
-            <a href="http://www.pinterest.com/{{ site.pinterest_username }}" class="fa-pinterest-p square fill-horizontal"><span class="screen-reader-text">Pinterest</span></a>
-            {% endif %}
-            {% if site.linkedin_username %}
-            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" class="fa-linkedin square fill-horizontal"><span class="screen-reader-text">LinkedIn</span></a>
-            {% endif %}
-            {% if site.weibo_username %}
-            <a href="http://weibo.com/{{ site.weibo_username }}" class="fa-weibo square fill-horizontal"><span class="screen-reader-text">Weibo</span></a>
-            {% endif %}
-            <a class="fa-feed square fill-horizontal" href="{{ site.baseurl }}/feed.xml"><span class="screen-reader-text">RSS</span></a>
-        </div><!-- .social-links -->
-        <div class="site-info">
-            &copy; <a href="{{ site.baseurl }}/">{{site.title}}</a> all rights reserved. <br />Powered by <a target="_blank" href="https://jekyllrb.com/">Jekyll</a>. BlogInn theme by <a target="_blank" href="http://justgoodthemes.com/">JustGoodThemes</a>
-            <a href="#top" id="top-link" class="fa-chevron-up top-link square fill-horizontal"><span class="screen-reader-text">Back to the top</span></a>
-        </div><!-- .site-info -->
-    </div><!-- .inner -->
-</footer><!-- .site-footer -->
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__info">
+            <div class="footer__title">net<span style="color:#00d4aa">sharp</span>dev</div>
+            <p class="footer__text">A developer blog about Azure, .NET, and software architecture by {{ site.author_name }}.</p>
+            <div class="footer__social">
+                {% if site.github_username %}
+                <a href="https://github.com/{{ site.github_username }}" class="footer__social-link" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                {% endif %}
+                {% if site.linkedin_username %}
+                <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" class="footer__social-link" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                {% endif %}
+                {% if site.twitter_username %}
+                <a href="https://twitter.com/{{ site.twitter_username }}" class="footer__social-link" aria-label="Twitter">
+                    <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                </a>
+                {% endif %}
+                <a href="{{ site.baseurl }}/feed.xml" class="footer__social-link" aria-label="RSS Feed">
+                    <svg viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 010 4.36 2.18 2.18 0 010-4.36M4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44m0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93V10.1z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer__nav">
+            <div class="footer__heading">Navigation</div>
+            <ul class="footer__links">
+                {% for link in site.navigation %}
+                <li><a href="{{ link.url }}">{{ link.text }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="footer__nav">
+            <div class="footer__heading">Connect</div>
+            <ul class="footer__links">
+                {% if site.github_username %}<li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>{% endif %}
+                {% if site.linkedin_username %}<li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">LinkedIn</a></li>{% endif %}
+                {% if site.twitter_username %}<li><a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>{% endif %}
+                <li><a href="{{ site.baseurl }}/feed.xml">RSS Feed</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <span>&copy; {{ 'now' | date: "%Y" }} {{ site.author_name }}. All rights reserved.</span>
+        <a href="#top" id="back-to-top">Back to top &uarr;</a>
+    </div>
+</footer>

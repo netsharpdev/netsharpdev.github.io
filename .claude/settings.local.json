@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:developer.konghq.com)",
+      "Bash(bundle exec:*)",
+      "Bash(bundle install:*)",
+      "Bash(ruby:*)",
+      "Bash(which rbenv:*)",
+      "Bash(export:*)"
+    ]
+  }
+}
