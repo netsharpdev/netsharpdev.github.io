@@ -7,7 +7,16 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__inner">
         <div className="footer__info">
-          <div className="footer__title">
+          <div className="footer__title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <svg width="28" height="28" viewBox="0 0 72 72" aria-hidden="true">
+              <line x1="14" y1="62" x2="14" y2="10" stroke="#00D4AA" strokeWidth="3" strokeLinecap="round"/>
+              <line x1="14" y1="10" x2="58" y2="62" stroke="#00D4AA" strokeWidth="3" strokeLinecap="round"/>
+              <line x1="58" y1="62" x2="58" y2="10" stroke="#00D4AA" strokeWidth="3" strokeLinecap="round"/>
+              <circle cx="14" cy="10" r="5" fill="#00D4AA"/>
+              <circle cx="14" cy="62" r="5" fill="#00D4AA"/>
+              <circle cx="58" cy="10" r="5" fill="#00D4AA"/>
+              <circle cx="58" cy="62" r="5" fill="#00D4AA"/>
+            </svg>
             net<span style={{ color: '#00d4aa' }}>sharp</span>dev
           </div>
           <p className="footer__text">
