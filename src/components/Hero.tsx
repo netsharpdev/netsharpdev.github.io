@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="hero">
       <div className="hero__bg"></div>
       <div className="hero__content">
-        <span className="hero__label">Principal Software Engineer</span>
+        <span className="hero__label">Paweł Pindel, Principal Enginner</span>
         <h1 className="hero__title">
           Building <span className="highlight">cloud-native</span> solutions
           with Azure &amp; .NET

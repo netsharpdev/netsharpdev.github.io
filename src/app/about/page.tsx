@@ -28,10 +28,10 @@ export default function AboutPage() {
 
         <h3>Who am I?</h3>
         <p>
-          My name is Pawe&#322; Pindel, I am Software Engineer and Tech Lead
+          My name is Pawe&#322; Pindel, I am Principal Software Engineer
           from Poland, Certified Azure Developer, currently working at{' '}
-          <a href="https://gravity9.com/">gravity9</a>. As a developer I have
-          over 8 years of professional experience. I am Microsoft Technologies
+          <a href="https://www.verisk.com/">Verisk Analytics</a>. As a developer I have
+          over 11 years of professional experience. I am Microsoft Technologies
           enthusiast but also open for other tech stacks. Trying to pick language
           adequate to the problem - not to solve all problems with one language
           or framework. I love to automate stuff.

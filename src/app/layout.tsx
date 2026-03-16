@@ -6,7 +6,7 @@ import '@/styles/globals.css';
 export const metadata: Metadata = {
   title: 'Paweł Pindel | .NET - Azure - Software Development',
   description:
-    'NETSHARPDEV is a developer blog about Azure, .NET and Architecture. Here you can read some great posts of Paweł Pindel, Software Engineer at Gravity9 and NETSharp Development.',
+    'NETSHARPDEV is a developer blog about Azure, .NET and Architecture. Here you can read some great posts of Paweł Pindel, Principal Software Engineer at Verisk Analytics and NETSharp Development.',
 };
 
 export default function RootLayout({

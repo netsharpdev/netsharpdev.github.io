@@ -9,8 +9,8 @@ export default function AuthorCard() {
       <div>
         <div className="author-card__name">Pawe&#322; Pindel</div>
         <p className="author-card__bio">
-          Software Engineer and Technical Leader, Microsoft Technologies
-          enthusiast and Public Speaker. Working currently at gravity9. Sharing
+          Principal Software Engineer and Technical Leader, Microsoft Technologies
+          enthusiast and Public Speaker. Working currently at Verisk Analytics. Sharing
           knowledge and discussing modern software development.
         </p>
         <span className="author-card__location">Krak&oacute;w, Poland</span>
