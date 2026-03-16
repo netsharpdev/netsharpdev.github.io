@@ -14,7 +14,8 @@
       "Bash(HOME=/tmp/npmhome npm install --cache /tmp/npm-cache 2>&1)",
       "Bash(HOME=/tmp/npmhome npx next build 2>&1)",
       "Bash(npm run:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git branch:*)"
     ]
   }
 }

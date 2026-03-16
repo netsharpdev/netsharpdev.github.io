@@ -9,6 +9,9 @@ out/
 *.tsbuildinfo
 next-env.d.ts
 
+# claude
+.claude/
+
 # Jekyll (legacy)
 _site/
 .sass-cache/
