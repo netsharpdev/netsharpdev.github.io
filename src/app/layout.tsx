@@ -4,9 +4,47 @@ import Footer from '@/components/Footer';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
-  title: 'Paweł Pindel | .NET - Azure - Software Development',
+  metadataBase: new URL('https://netsharpdev.com'),
+  title: {
+    default: 'Paweł Pindel | .NET - Azure - Software Development',
+    template: '%s | Paweł Pindel',
+  },
   description:
     'NETSHARPDEV is a developer blog about Azure, .NET and Architecture. Here you can read some great posts of Paweł Pindel, Principal Software Engineer at Verisk Analytics and NETSharp Development.',
+  openGraph: {
+    type: 'website',
+    siteName: 'NETSHARPDEV',
+    locale: 'en_US',
+    url: '/',
+    title: 'Paweł Pindel | .NET - Azure - Software Development',
+    description:
+      'Developer blog about Azure, .NET and Architecture by Paweł Pindel, Principal Software Engineer.',
+    images: [
+      {
+        url: '/images/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'NETSHARPDEV - Paweł Pindel',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Paweł Pindel | .NET - Azure - Software Development',
+    description:
+      'Developer blog about Azure, .NET and Architecture by Paweł Pindel.',
+    images: ['/images/og-default.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: '/',
+    types: {
+      'application/rss+xml': '/feed.xml',
+    },
+  },
 };
 
 export default function RootLayout({

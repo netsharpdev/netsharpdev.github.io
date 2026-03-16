@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NETSHARPDEV - Paweł Pindel</title>
+    <link>https://netsharpdev.com/</link>
+    <description>Developer blog about Azure, .NET and Architecture by Paweł Pindel</description>
+    <language>en</language>
+    <atom:link href="https://netsharpdev.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Azure Durable Functions Meetup in Krakow</title>
+      <link>https://netsharpdev.com/posts/azure-durable-functions-meetup/</link>
+      <guid>https://netsharpdev.com/posts/azure-durable-functions-meetup/</guid>
+      <pubDate>Mon, 10 Jun 2024 00:00:00 GMT</pubDate>
+      <description>I recently had the privilege of leading a workshop on Azure Durable Functions in Krakow, hosted by Gravity9. This event provided a fantastic platform for me to ...</description>
+    </item>
+    <item>
+      <title>Unleasing the Power of Azure Durable Functions</title>
+      <link>https://netsharpdev.com/posts/azure-durable-functions/</link>
+      <guid>https://netsharpdev.com/posts/azure-durable-functions/</guid>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 GMT</pubDate>
+      <description>In the ever-evolving landscape of cloud computing, serverless architectures have become a go-to solution for building scalable and efficient applications. Azure...</description>
+    </item>
+    <item>
+      <title>Instrumentation in Azure</title>
+      <link>https://netsharpdev.com/posts/logging-in-azure/</link>
+      <guid>https://netsharpdev.com/posts/logging-in-azure/</guid>
+      <pubDate>Wed, 06 Apr 2022 00:00:00 GMT</pubDate>
+      <description>Nowadays app instrumentation is very important. It helps to monitor how our infrastrucutre and application works, allows to detect weird behaviors and security ...</description>
+    </item>
+    <item>
+      <title>Geospatial Indexes in MongoDB</title>
+      <link>https://netsharpdev.com/posts/geoindexes-in-mongodb/</link>
+      <guid>https://netsharpdev.com/posts/geoindexes-in-mongodb/</guid>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 GMT</pubDate>
+      <description>What are geospatial indexes? Recently I have been preparing to MongoDB Professional Developer certification program. I learnt there about something called Geosp...</description>
+    </item>
+    <item>
+      <title>Long time no see!</title>
+      <link>https://netsharpdev.com/posts/where-were-you/</link>
+      <guid>https://netsharpdev.com/posts/where-were-you/</guid>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 GMT</pubDate>
+      <description>How to authenticate and authorize on behalf of user? At the beginning of this post I should ask you for forgiveness. It has been a loooong time since I wrote my...</description>
+    </item>
+    <item>
+      <title>On behalf flow in OAuth2.0, Azure AD and .NET Core</title>
+      <link>https://netsharpdev.com/posts/oauth-on-behalf-flow/</link>
+      <guid>https://netsharpdev.com/posts/oauth-on-behalf-flow/</guid>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 GMT</pubDate>
+      <description>There are couple of existing ways how to authenticate one app to another when you create a distributed system. You can write your own identity service and use i...</description>
+    </item>
+    <item>
+      <title>Azure Functions v2 stopped working after v3 release</title>
+      <link>https://netsharpdev.com/posts/azure-functions-v2-stopped-working-after-v3-release/</link>
+      <guid>https://netsharpdev.com/posts/azure-functions-v2-stopped-working-after-v3-release/</guid>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 GMT</pubDate>
+      <description>Azure Functions v2 stopped working after release of Azure Functions v3 Did you experience that problem? Because me and my team did. We spent a lot of time looki...</description>
+    </item>
+    <item>
+      <title>Clean Architecture based on my open-source project</title>
+      <link>https://netsharpdev.com/posts/clean-architecture/</link>
+      <guid>https://netsharpdev.com/posts/clean-architecture/</guid>
+      <pubDate>Wed, 04 Dec 2019 00:00:00 GMT</pubDate>
+      <description>Recently I am starting a couple of new projects. One of them is my university open-source project helping to donate animal shelters. The first challenge every d...</description>
+    </item>
+    <item>
+      <title>Asynchronous programming in .NET - introduction</title>
+      <link>https://netsharpdev.com/posts/asynchronous-programming-in-dot-net/</link>
+      <guid>https://netsharpdev.com/posts/asynchronous-programming-in-dot-net/</guid>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 GMT</pubDate>
+      <description>At the beginning, it is worth considering what asynchronous programming is and why it is better than synchronous. Asynchronous programming involves approaching ...</description>
+    </item>
+    <item>
+      <title>Architectural patterns - holiness or guideline?</title>
+      <link>https://netsharpdev.com/posts/architectural-patterns-holiness-or-guideline/</link>
+      <guid>https://netsharpdev.com/posts/architectural-patterns-holiness-or-guideline/</guid>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 GMT</pubDate>
+      <description>Many people at the beginning of the project ask themselves - what architecture to choose? Would you not even think about it when starting your first serious pro...</description>
+    </item>
+  </channel>
+</rss>

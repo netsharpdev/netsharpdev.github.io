@@ -1,8 +1,16 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Paweł Pindel',
+  title: 'Portfolio',
   description: 'These are projects I have created or worked on in my career.',
+  alternates: {
+    canonical: '/portfolio/',
+  },
+  openGraph: {
+    title: 'Portfolio',
+    description: 'These are projects I have created or worked on in my career.',
+    url: '/portfolio/',
+  },
 };
 
 export default function PortfolioPage() {

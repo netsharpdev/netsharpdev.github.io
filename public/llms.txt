@@ -1,0 +1,22 @@
+# NETSHARPDEV
+
+> Developer blog by Paweł Pindel, Principal Software Engineer at Verisk Analytics.
+
+## About
+
+This site covers Azure, .NET, software architecture, and modern cloud-native development.
+The author shares insights, opinions, and real-world solutions from professional experience.
+
+## Content
+
+- Blog posts on Azure services, .NET development, and software architecture
+- Portfolio of professional projects
+- About the author
+
+## Key URLs
+
+- Homepage: https://netsharpdev.com/
+- RSS Feed: https://netsharpdev.com/feed.xml
+- Sitemap: https://netsharpdev.com/sitemap.xml
+- About: https://netsharpdev.com/about/
+- Portfolio: https://netsharpdev.com/portfolio/

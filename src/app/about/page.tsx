@@ -1,13 +1,40 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About me | Paweł Pindel',
+  title: 'About me',
   description: 'Couple of words about me and the reason why I write.',
+  alternates: {
+    canonical: '/about/',
+  },
+  openGraph: {
+    title: 'About me',
+    description: 'Couple of words about me and the reason why I write.',
+    url: '/about/',
+  },
 };
 
 export default function AboutPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Paweł Pindel',
+    jobTitle: 'Principal Software Engineer',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Verisk Analytics',
+      url: 'https://www.verisk.com/',
+    },
+    url: 'https://netsharpdev.com/',
+    email: 'pawel.pindel@netsharpdev.com',
+  };
+
   return (
     <article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <header className="post-header">
         <div className="container">
           <h1 className="post-header__title">About me</h1>
