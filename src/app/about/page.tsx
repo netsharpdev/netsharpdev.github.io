@@ -2,13 +2,15 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About me',
-  description: 'Couple of words about me and the reason why I write.',
+  description:
+    'Principal Software Engineer Paweł Pindel on product engineering, AI-augmented development, and cloud architecture.',
   alternates: {
     canonical: '/about/',
   },
   openGraph: {
     title: 'About me',
-    description: 'Couple of words about me and the reason why I write.',
+    description:
+      'Principal Software Engineer Paweł Pindel on product engineering, AI-augmented development, and cloud architecture.',
     url: '/about/',
   },
 };
@@ -39,55 +41,108 @@ export default function AboutPage() {
         <div className="container">
           <h1 className="post-header__title">About me</h1>
           <p className="post-header__meta" style={{ display: 'block', textAlign: 'center' }}>
-            Couple of words about me and the reason why I write.
+            Principal Software Engineer, Azure Developer, and product engineer focused on clear,
+            scalable software.
           </p>
         </div>
       </header>
 
       <div className="page-content">
-        <h3>Contact me</h3>
+        <h3>About Me</h3>
         <p>
-          You can contact me via this email:{' '}
-          <a href="mailto:pawel.pindel@netsharpdev.com">
-            <strong>pawel.pindel@netsharpdev.com</strong>
-          </a>
+          I’m Pawe&#322; Pindel, a Principal Software Engineer, Azure Developer, and
+          full-spectrum Product Engineer from Poland. For more than a decade,
+          I’ve been building cloud-native applications, distributed systems, and
+          data-driven products using Microsoft technologies, .NET, Azure, and
+          modern software architecture practices.
+        </p>
+        <p>
+          Today, I work at <a href="https://www.verisk.com/">Verisk Analytics</a>,
+          where I operate at the intersection of product engineering, solution
+          architecture, and AI-augmented development. My mission is simple: build
+          software that is clear, scalable, and genuinely useful — and help
+          teams deliver it faster and smarter.
         </p>
 
-        <h3>Who am I?</h3>
+        <h3>What I Do</h3>
         <p>
-          My name is Pawe&#322; Pindel, I am Principal Software Engineer
-          from Poland, Certified Azure Developer, currently working at{' '}
-          <a href="https://www.verisk.com/">Verisk Analytics</a>. As a developer I have
-          over 11 years of professional experience. I am Microsoft Technologies
-          enthusiast but also open for other tech stacks. Trying to pick language
-          adequate to the problem - not to solve all problems with one language
-          or framework. I love to automate stuff.
+          My role spans the full product lifecycle — from shaping requirements
+          to designing architecture to writing production code.
         </p>
-        <p>My motto is:</p>
+
+        <h4>AI Transformation &amp; LLM-Assisted Development</h4>
+        <ul>
+          <li>Introducing LLM-assisted coding with tools like GitHub Copilot and Claude Code.</li>
+          <li>Evaluating AI development tools and agentic workflows.</li>
+          <li>Helping teams adopt AI-augmented engineering practices.</li>
+          <li>Improving productivity across the entire SDLC.</li>
+        </ul>
+        <p>I believe AI is not replacing developers — it’s amplifying them.</p>
+
+        <h4>Cloud &amp; Software Architecture</h4>
+        <ul>
+          <li>Azure and AWS cloud-native architectures.</li>
+          <li>Microservices, APIs, and event-driven systems.</li>
+          <li>.NET, C#, TypeScript, Angular.</li>
+          <li>PostgreSQL, Snowflake, and modern data platforms.</li>
+          <li>Automation, DevOps, and scalable infrastructure.</li>
+        </ul>
+        <p>I enjoy turning complex business problems into clean, maintainable solutions.</p>
+
+        <h4>Product Engineering</h4>
+        <p>
+          I work closely with stakeholders to translate domain-heavy requirements
+          into actionable engineering work. My approach blends product thinking,
+          UX awareness, architectural clarity, and hands-on coding — delivering
+          features that are technically sound and aligned with real user needs.
+        </p>
+
+        <h4>Technical Leadership</h4>
+        <p>
+          I mentor developers, lead code reviews, and help teams grow their
+          engineering maturity. I care deeply about clean code, automation,
+          continuous improvement, knowledge sharing, and building a healthy
+          engineering culture.
+        </p>
+
+        <h3>How I Think</h3>
+        <p>
+          I’m a Microsoft technologies enthusiast, but I’m not tied to any
+          single stack. I choose tools based on the problem — not the other way
+          around. I automate everything I can. I value clarity over cleverness.
+          And I try to live by a motto that has shaped my career:
+        </p>
         <blockquote>
           <p>
-            Try to learn something about everything and everything about
-            something.{' '}
+            Learn something about everything and everything about something.{' '}
             <cite>&mdash; Thomas Henry Huxley</cite>
           </p>
         </blockquote>
+
+        <h3>Beyond Engineering</h3>
         <p>
-          Besides development, I am amateur chef and also really enjoy
-          travelling and hiking around the world but especially in love with
-          polish countryside and nature. I love spending time in a forest.
+          Outside of work, I’m an amateur chef, traveler, and someone who finds
+          peace in the Polish countryside. Forests are my favorite place to
+          reset, think, and recharge.
         </p>
 
-        <h3>Why do I write?</h3>
+        <h3>Why I Write</h3>
         <p>
-          I write this blog to share my knowledge about development but also to
-          learn. It is a great opportunity to improve skills when I have to
-          prepare professional text about a chosen topic.
-          <br />
-          Being open for discussion, I also want to learn from you! So please
-          leave a comment if you have something to say on what I wrote.
+          I created this blog to share what I learn about Azure, .NET, cloud
+          architecture, AI-assisted development, and modern engineering
+          practices. Writing helps me think more clearly — and publishing invites
+          discussion. If something here sparks your curiosity or challenges your
+          thinking, feel free to reach out or leave a comment. I’m always happy
+          to learn from others.
         </p>
+
+        <h3>Contact me</h3>
         <p>
-          <em>Enjoy the reading!</em>
+          You can reach me at{' '}
+          <a href="mailto:pawel.pindel@netsharpdev.com">
+            <strong>pawel.pindel@netsharpdev.com</strong>
+          </a>
+          .
         </p>
       </div>
     </article>
