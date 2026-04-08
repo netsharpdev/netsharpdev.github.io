@@ -1,0 +1,31 @@
+<h2>How should art-monkey appear in your portfolio?</h2>
+<p class="subtitle">Two structural approaches — both capture the same work, different framing</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>One combined entry — "Art Monkey CMS System"</h3>
+      <p>Single portfolio item covering the full system: the public Next.js website <strong>(artmonkey.pl)</strong> + the <strong>.NET Azure Functions CMS API</strong> + the <strong>React admin UI</strong>. One description, two screenshots (website + admin panel).</p>
+      <p><em>Best when the value is the end-to-end system, not the parts individually.</em></p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Two separate entries — website + CMS</h3>
+      <p>Entry 1: <strong>artmonkey-stage</strong> — the creative studio portfolio website (Next.js, Azure CDN, animations).<br/>Entry 2: <strong>art-monkey-cms</strong> — the headless CMS backend + admin panel (.NET 10 Azure Functions, React, Tailwind).</p>
+      <p><em>Best when you want to highlight different skills (frontend vs backend/infra) separately.</em></p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 2rem;">
+  <p class="label">Tech Stack (both entries would reference)</p>
+  <ul>
+    <li>Next.js 15 · React 19 · TypeScript · SASS · Bootstrap 5 · Framer Motion</li>
+    <li>.NET 10 Azure Functions · C# · JWT Auth · Azure Blob Storage</li>
+    <li>React Admin UI · Vite · TailwindCSS 4 · TipTap · dnd-kit</li>
+    <li>GitHub Actions CI/CD · Netlify hosting</li>
+  </ul>
+</div>

@@ -24,7 +24,9 @@
       "Bash(gh run:*)",
       "Bash(gh workflow:*)",
       "WebFetch(domain:localhost)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(/Users/pawelpindel/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/brainstorming/scripts/start-server.sh:*)",
+      "mcp__MCP_DOCKER__browser_navigate"
     ]
   }
 }

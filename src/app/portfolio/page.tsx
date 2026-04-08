@@ -28,18 +28,18 @@ export default function PortfolioPage() {
       <div className="page-content">
         <p>Below you can find my portfolio.</p>
 
-        <h2>American Homes 4 Rent Portal</h2>
-        <img src="/images/ah4r.png" alt="ah4r" />
+        <h2>AMH (American Homes) Portal</h2>
+        <img src="/images/ah4r.png" alt="AMH" />
         <p>
           In cooperation with <a href="https://gravity9solutions.com">Gravity9</a>{' '}
-          I am creating web applicatin for American Homes 4 Rent. The goal of the
-          tool is to make house leasing easy and contactless. We are working on
-          great experience for applicant but also for current resident. It is
-          simple to get into property without an agent, using &quot;Let Yourself
-          In&quot; flow that provides you with access code to the doors of a house
-          you dream of. From resident perspective you can manage your service
-          request in case your pipe is broken or anything else goes wrong.
-          Everything in one place.
+          I created a web application for AMH (American Homes). The goal of the
+          tool is to make house leasing easy and contactless. We worked on a
+          great experience for applicants as well as for current residents. It is
+          simple to get into a property without an agent, using the &quot;Let
+          Yourself In&quot; flow that provides you with an access code to the
+          doors of the house you dream of. From a resident&apos;s perspective you
+          can manage your service requests in case a pipe is broken or anything
+          else goes wrong. Everything in one place.
         </p>
 
         <hr />
@@ -47,13 +47,13 @@ export default function PortfolioPage() {
         <h2>ABB Library</h2>
         <img src="/images/abblibrary.png" alt="ABB Library" />
         <p>
-          While I was been working for Sii Poland I was delegated to ABB Global
-          Business Services to design and develop project called{' '}
-          <a href="https://library.abb.com/">Library</a>. It is full text search
-          solution within company. It stores documents, manuals and many different
-          types of files which are shared accros company and also to the
-          customers. I was responsible not only for a product but also DevOps
-          processes around that.
+          While I was working for Sii Poland I was delegated to ABB Global
+          Business Services to design and develop a project called{' '}
+          <a href="https://library.abb.com/">Library</a>. It is a full-text
+          search solution within the company. It stores documents, manuals and
+          many different types of files which are shared across the company and
+          also with customers. I was responsible not only for the product but
+          also for the DevOps processes around it.
         </p>
 
         <hr />
@@ -77,13 +77,37 @@ export default function PortfolioPage() {
         <h2>IqScreen</h2>
         <img src="/images/iq.jpg" alt="IqScreen" />
         <p>
-          I am co-creator of IqScreen application, inteligent commercials
-          provider, Polish Innovation Award 2019 laureatee. Application is
-          responsible for showing commercials to taxi passangers based on the AI.
-          It reads lot of parameters from your face and presents only commercials
-          which suits to your age, gender, localization and time of a day. I
-          prepared full backend solution in cooperation with Mobile Developer who
-          created mobile applicaiton part, contracted by In1 AI Sp z o.o.
+          I am the co-creator of IqScreen, an intelligent commercial provider
+          and Polish Innovation Award 2019 laureate. The application shows
+          commercials to taxi passengers based on AI. It reads a lot of
+          parameters from your face and presents only commercials that suit your
+          age, gender, location and time of day. I prepared the full backend
+          solution in cooperation with a mobile developer who created the mobile
+          application, contracted by In1 AI Sp z o.o.
+        </p>
+
+        <hr />
+
+        <h2>Art Monkey CMS System</h2>
+        <p>
+          Art Monkey is a personal full-stack project I built from scratch — a
+          headless CMS powering a creative studio portfolio website at{' '}
+          <a href="https://artmonkey.pl">artmonkey.pl</a>.
+        </p>
+        <p>
+          The public website (<strong>artmonkey-stage</strong>) is a Next.js 15
+          application featuring a portfolio gallery with lightbox, smooth
+          animations via Framer Motion, and images served from Azure CDN. Content
+          is fetched at build time from the CMS API and deployed automatically to
+          Netlify via GitHub Actions.
+        </p>
+        <p>
+          The CMS backend (<strong>art-monkey-cms</strong>) is a .NET 10 Azure
+          Functions API with JWT authentication and Azure Blob Storage for image
+          management. A GitHub Actions dispatch integration automatically triggers
+          a site rebuild whenever content is saved. The admin UI is built with
+          React 19, TailwindCSS 4, TipTap rich text editor, and drag-and-drop
+          support via dnd-kit.
         </p>
 
         <hr />
