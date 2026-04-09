@@ -4,6 +4,14 @@ const { checkRateLimit } = require('../rateLimit');
 const { validateContactInput } = require('../validate');
 const { verifyTurnstile } = require('../turnstile');
 
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 app.http('sendEmail', {
   methods: ['POST'],
   authLevel: 'anonymous',
@@ -37,6 +45,15 @@ app.http('sendEmail', {
 
     const { name, email, message, turnstileToken } = body;
 
+    const validationError = validateContactInput({ name, email, message });
+    if (validationError) {
+      return {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ error: validationError }),
+      };
+    }
+
     const turnstileValid = await verifyTurnstile(
       turnstileToken,
       process.env.TURNSTILE_SECRET_KEY
@@ -46,15 +63,6 @@ app.http('sendEmail', {
         status: 400,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ error: 'CAPTCHA verification failed' }),
-      };
-    }
-
-    const validationError = validateContactInput({ name, email, message });
-    if (validationError) {
-      return {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ error: validationError }),
       };
     }
 
@@ -74,7 +82,7 @@ app.http('sendEmail', {
         to: process.env.RECIPIENT_EMAIL,
         subject: `[Contact] Message from ${name}`,
         text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-        html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g, '<br>')}</p>`,
+        html: `<p><strong>Name:</strong> ${escapeHtml(name)}</p><p><strong>Email:</strong> ${escapeHtml(email)}</p><p><strong>Message:</strong></p><p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>`,
       });
     } catch (err) {
       context.error('Failed to send email:', err);

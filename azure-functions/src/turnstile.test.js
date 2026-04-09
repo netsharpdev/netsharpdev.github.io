@@ -31,3 +31,8 @@ test('calls the correct Cloudflare endpoint', async () => {
     expect.objectContaining({ method: 'POST' })
   );
 });
+
+test('returns false when fetch throws (network error)', async () => {
+  global.fetch.mockRejectedValue(new Error('Network error'));
+  expect(await verifyTurnstile('token', 'secret')).toBe(false);
+});
