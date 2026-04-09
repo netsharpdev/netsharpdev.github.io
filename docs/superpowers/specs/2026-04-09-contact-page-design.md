@@ -60,7 +60,7 @@ Split two-column layout matching the site's dark aesthetic:
 ### Env vars
 ```
 NEXT_PUBLIC_CONTACT_API_URL=https://<function-app>.azurewebsites.net/api/sendEmail
-NEXT_PUBLIC_TURNSTILE_SITE_KEY=<cloudflare-site-key>
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=0x4AAAAAAC2xGBy_CE0gVAOY
 ```
 Set in GitHub Actions secrets for production build; `.env.local` for dev.
 
