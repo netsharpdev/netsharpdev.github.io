@@ -84,7 +84,7 @@ export default function OfertaPage() {
         <div className="container">
           <span className="offer-eyebrow">Transformacja AI</span>
           <h1 className="post-header__title">
-            Transformacja AI<br />dla Twojego Biznesu
+            Transformacja AI<br />dla twojego biznesu
           </h1>
           <p className="post-header__meta" style={{ display: 'block', textAlign: 'center' }}>
             Praktyczny consulting AI dla małych i średnich firm —<br />
@@ -96,7 +96,7 @@ export default function OfertaPage() {
       <div className="page-content">
 
         {/* 2 · Problem */}
-        <h3>Luka AI się Powiększa</h3>
+        <h3>Luka AI się powiększa</h3>
         <p>
           Każdego tygodnia firmy na całym świecie zastępują ręczne procesy
           automatyzacją opartą na AI. Piszą e-maile szybciej, odpowiadają na pytania
@@ -119,11 +119,11 @@ export default function OfertaPage() {
         </blockquote>
 
         {/* 3 · Podejście */}
-        <h3>Jak Pracuję</h3>
+        <h3>Jak pracuję</h3>
         <div className="offer-grid-3" style={{ marginBottom: '3rem' }}>
           <div className="offer-approach-card">
             <div className="offer-approach-icon">🔍</div>
-            <h4>Najpierw Zrozumienie</h4>
+            <h4>Najpierw zrozumienie</h4>
             <p>
               Zanim cokolwiek zarekomenduję, poświęcam czas na zrozumienie Twojego
               biznesu — procesów, zespołu i ograniczeń. Żadnych gotowych rozwiązań.
@@ -131,7 +131,7 @@ export default function OfertaPage() {
           </div>
           <div className="offer-approach-card">
             <div className="offer-approach-icon">⚡</div>
-            <h4>Praktyczność, nie Hype</h4>
+            <h4>Praktyczność, nie hype</h4>
             <p>
               Skupiam się na narzędziach i technikach, które rozwiązują prawdziwe
               problemy już dziś. Bez buzzwordów, bez nadmiernie skomplikowanych
@@ -140,7 +140,7 @@ export default function OfertaPage() {
           </div>
           <div className="offer-approach-card">
             <div className="offer-approach-icon">🤝</div>
-            <h4>Zbudowane na Lata</h4>
+            <h4>Zbudowane na lata</h4>
             <p>
               Wszystko, co buduję lub rekomenduję, Twój zespół może zrozumieć,
               utrzymać i rozwijać. Przekazanie wiedzy jest częścią każdego
@@ -150,11 +150,11 @@ export default function OfertaPage() {
         </div>
 
         {/* 4 · Usługi */}
-        <h3>Co Oferuję</h3>
+        <h3>Co oferuję</h3>
 
         <div className="offer-service-card" style={{ marginBottom: '1.5rem', borderLeft: '4px solid #00D4AA' }}>
           <span className="offer-eyebrow" style={{ marginBottom: '0.5rem' }}>Usługa 01</span>
-          <h4>Audyt Gotowości na AI</h4>
+          <h4>Audyt gotowości na AI</h4>
           <p>
             Gdzie AI pasuje do Twojego biznesu? Na to pytanie odpowiada to zaangażowanie.
           </p>
@@ -172,7 +172,7 @@ export default function OfertaPage() {
 
         <div className="offer-service-card" style={{ marginBottom: '1.5rem', borderLeft: '4px solid #3B82F6' }}>
           <span className="offer-eyebrow" style={{ marginBottom: '0.5rem', color: '#3B82F6' }}>Usługa 02</span>
-          <h4>Warsztaty AI i Szkolenie Zespołu</h4>
+          <h4>Warsztaty AI i szkolenie zespołu</h4>
           <p>
             Twój zespół to Twój największy atut. Te warsztaty zamykają lukę między
             wiedzą o istnieniu AI a codziennym korzystaniem z niej.
@@ -191,7 +191,7 @@ export default function OfertaPage() {
 
         <div className="offer-service-card" style={{ marginBottom: '1.5rem', borderLeft: '4px solid #00D4AA' }}>
           <span className="offer-eyebrow" style={{ marginBottom: '0.5rem' }}>Usługa 03</span>
-          <h4>Integracja i Wdrożenie AI</h4>
+          <h4>Integracja i wdrożenie AI</h4>
           <p>
             Czasem potrzebujesz czegoś więcej niż porady — potrzebujesz czegoś
             zbudowanego.
@@ -210,7 +210,7 @@ export default function OfertaPage() {
 
         <div className="offer-service-card" style={{ marginBottom: '3rem', borderLeft: '4px solid #3B82F6' }}>
           <span className="offer-eyebrow" style={{ marginBottom: '0.5rem', color: '#3B82F6' }}>Usługa 04</span>
-          <h4>Stałe Doradztwo AI</h4>
+          <h4>Stałe doradztwo AI</h4>
           <p>
             AI rozwija się szybko. To, co jest najlepszym rozwiązaniem dziś, może
             być przestarzałe za sześć miesięcy. Retainer pozwala Ci być o krok do przodu.
@@ -229,7 +229,7 @@ export default function OfertaPage() {
         </div>
 
         {/* 5 · Referencje */}
-        <h3>Dlaczego Warto Współpracować</h3>
+        <h3>Dlaczego warto współpracować</h3>
         <div className="offer-grid-2" style={{ marginBottom: '3rem' }}>
           <div>
             <h4>Doświadczenie</h4>
@@ -244,7 +244,7 @@ export default function OfertaPage() {
             </ul>
           </div>
           <div>
-            <h4>Ostatnie Szkolenia</h4>
+            <h4>Ostatnie szkolenia</h4>
             <ul>
               <li>Developer Jutra — edu.devstyle.pl</li>
               <li>Architekt Jutra — edu.devstyle.pl</li>
