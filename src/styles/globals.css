@@ -1120,3 +1120,120 @@ pre code {
   .post-content { padding: 0 1rem; }
   .post-footer { padding: 0 1rem; }
 }
+
+/* Offer page layout */
+.offer-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.offer-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.offer-service-card {
+  background: #0A0A0F;
+  border: 1px solid #0d1e2a;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.offer-approach-card {
+  background: #0A0A0F;
+  border: 1px solid #0d1e2a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.offer-approach-card h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.offer-approach-card p {
+  font-size: 0.875rem;
+  color: #71717A;
+  margin: 0;
+}
+
+.offer-approach-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.offer-cta-section {
+  text-align: center;
+  padding: 5rem 0;
+  background: linear-gradient(180deg, transparent, rgba(0, 212, 170, 0.03));
+}
+
+.offer-cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.offer-cta-section p {
+  color: #71717A;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.offer-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #00D4AA, #3B82F6);
+  color: #050507;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.875rem 2.5rem;
+  border-radius: 9999px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.offer-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  color: #050507;
+}
+
+.offer-eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #00D4AA;
+  margin-bottom: 1rem;
+}
+
+.offer-what-you-get {
+  margin-top: 1.25rem;
+  padding: 0.875rem 1.25rem;
+  background: rgba(0, 212, 170, 0.05);
+  border-left: 3px solid #00D4AA;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.875rem;
+  color: #71717A;
+}
+
+.offer-what-you-get strong {
+  color: #00D4AA;
+}
+
+@media (max-width: 768px) {
+  .offer-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-cta-section h2 {
+    font-size: 1.75rem;
+  }
+}
