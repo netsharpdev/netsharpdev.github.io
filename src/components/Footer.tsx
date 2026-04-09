@@ -77,6 +77,9 @@ export default function Footer() {
             <li>
               <Link href="/portfolio">Portfolio</Link>
             </li>
+            <li>
+              <Link href="/oferta">Oferta</Link>
+            </li>
           </ul>
         </div>
         <div className="footer__nav">
