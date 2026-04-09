@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/offer/',
     languages: {
+      'x-default': '/offer/',
       en: '/offer/',
       pl: '/oferta/',
     },
