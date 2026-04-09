@@ -21,3 +21,6 @@ _site/
 
 # Visual brainstorming companion
 .superpowers/
+
+# Local env files
+.env*
