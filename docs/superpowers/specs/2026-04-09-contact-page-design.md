@@ -17,6 +17,7 @@ The site is a fully static Next.js 14 export deployed to GitHub Pages — no ser
 Browser (GitHub Pages)
   └─ POST JSON → Azure Function (HTTP trigger)
                    ├─ Rate limit check (in-memory, 5 req / IP / 15 min)
+                   ├─ Turnstile token verification → Cloudflare siteverify API
                    ├─ Input validation
                    └─ Nodemailer → Mailtrap SMTP → inbox
 ```
@@ -43,21 +44,27 @@ Split two-column layout matching the site's dark aesthetic:
 
 - **Right card** — contact form:
   - Fields: Name, Email, Message (textarea)
+  - Cloudflare Turnstile widget (renders above the submit button)
   - Submit button with gradient background
   - Three UI states: idle → loading (button disabled + spinner text) → success banner / error banner
 
 ### Form Behaviour
 - Client-side validation before submit: all fields required, valid email format, message ≤ 2000 chars.
-- On submit: `fetch` POST to `process.env.NEXT_PUBLIC_CONTACT_API_URL` with `{ name, email, message }` as JSON.
+- Turnstile widget renders via the `@marsidev/react-turnstile` package. On solve it provides a token via `onSuccess` callback stored in state. Submit is disabled until the token is present.
+- On submit: `fetch` POST to `process.env.NEXT_PUBLIC_CONTACT_API_URL` with `{ name, email, message, turnstileToken }` as JSON.
+- After submission (success or error), reset the Turnstile widget via its ref so the user can resubmit.
 - Success: green banner "Message sent! I'll get back to you soon."
 - Error: red banner with generic message ("Something went wrong. Please try again or email me directly.")
 - Rate-limited (429): banner "Too many requests. Please wait a few minutes and try again."
 
-### Env var
+### Env vars
 ```
 NEXT_PUBLIC_CONTACT_API_URL=https://<function-app>.azurewebsites.net/api/sendEmail
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=<cloudflare-site-key>
 ```
 Set in GitHub Actions secrets for production build; `.env.local` for dev.
+
+Turnstile site key is public (safe to expose). Use Cloudflare's test site key `1x00000000000000000000AA` in dev/CI so the widget always passes without a real challenge.
 
 ### Styling
 Follows existing globals.css patterns:
@@ -82,7 +89,7 @@ azure-functions/
   src/functions/sendEmail.js   # HTTP trigger handler
   package.json                  # nodemailer dependency
   host.json                     # CORS, logging config
-  local.settings.json           # gitignored — Mailtrap creds for local dev
+  local.settings.json           # gitignored — Mailtrap + Turnstile test creds for local dev
   .gitignore                    # excludes local.settings.json, node_modules
 ```
 
@@ -101,6 +108,23 @@ In-memory map: `{ [ip: string]: { count: number, resetAt: number } }`.
 - IP extracted from `x-forwarded-for` header, falling back to socket remote address.
 - Resets on cold start — acceptable trade-off; no Redis dependency needed.
 - Returns `429` with `Retry-After` header when exceeded.
+
+### Cloudflare Turnstile Verification
+Before input validation, verify the `turnstileToken` from the request body:
+```js
+const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    secret: process.env.TURNSTILE_SECRET_KEY,
+    response: turnstileToken,
+  }),
+});
+const { success } = await verifyRes.json();
+if (!success) return { status: 400, body: JSON.stringify({ error: 'CAPTCHA verification failed' }) };
+```
+- `TURNSTILE_SECRET_KEY` stored in Azure App Settings.
+- Use Cloudflare's test secret key `1x0000000000000000000000000000000AA` in dev/CI.
 
 ### Input Validation
 - All three fields (`name`, `email`, `message`) required.
@@ -131,6 +155,7 @@ MAILTRAP_PORT
 MAILTRAP_USER
 MAILTRAP_PASS
 RECIPIENT_EMAIL
+TURNSTILE_SECRET_KEY
 ```
 
 ### CORS (`host.json`)
@@ -157,13 +182,14 @@ func azure functionapp publish <function-app-name>
 Requires Azure Functions Core Tools (`func`) and an existing Function App in Azure portal.
 
 ### Next.js site
-Set `NEXT_PUBLIC_CONTACT_API_URL` in GitHub Actions environment secrets. No other CI changes needed.
+Add `@marsidev/react-turnstile` to the site's `package.json` (`npm install @marsidev/react-turnstile`).
+Set `NEXT_PUBLIC_CONTACT_API_URL` and `NEXT_PUBLIC_TURNSTILE_SITE_KEY` in GitHub Actions environment secrets. No other CI changes needed.
 
 ---
 
 ## Verification
 
-1. **Local dev:** Start function locally with `func start`, set `NEXT_PUBLIC_CONTACT_API_URL=http://localhost:7071/api/sendEmail` in `.env.local`, run `npm run dev`. Submit form → check Mailtrap sandbox inbox.
+1. **Local dev:** Start function locally with `func start`, set `NEXT_PUBLIC_CONTACT_API_URL=http://localhost:7071/api/sendEmail` and `NEXT_PUBLIC_TURNSTILE_SITE_KEY=1x00000000000000000000AA` in `.env.local`, run `npm run dev`. Submit form → Turnstile auto-passes → check Mailtrap sandbox inbox.
 2. **Rate limiting:** Submit form 6 times rapidly → 6th request returns 429 banner.
 3. **Validation:** Submit with empty fields / bad email → client-side error before request fires.
 4. **Production:** Deploy function to Azure, set env vars, trigger GitHub Actions build. Submit form on live site → email arrives in inbox.
