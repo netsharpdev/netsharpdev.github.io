@@ -61,15 +61,12 @@ export default function PortfolioPage() {
         <h2>Talmundo Onboarding App</h2>
         <img src="/images/talmundo.jpg" alt="Talmundo" />
         <p>
-          Talmundo&apos;s employee onboarding solution helps you easily build an
-          inspiring onboarding journey for your employees. Our software blends HR
-          best practices with your company&apos;s culture to deliver a great
-          onboarding experience that will positively impact your business by
-          getting your hires up and running and integrated faster. That&apos;s
-          onboarding for the new digital world! Keep scrolling to see some
-          highlights from an example digital journey as experienced by a new
-          hire. As a consultant and backend developer I was responsible for
-          coordinating DevOps and creating this application for over 3 years.
+          Talmundo&apos;s employee onboarding solution helped companies build
+          inspiring onboarding journeys for their new hires. The software blended
+          HR best practices with company culture to deliver a great onboarding
+          experience that got employees up and running faster. As a consultant
+          and backend developer I was responsible for coordinating DevOps and
+          building this application over more than 3 years.
         </p>
 
         <hr />
