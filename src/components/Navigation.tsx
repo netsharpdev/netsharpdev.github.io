@@ -8,6 +8,7 @@ const links = [
   { text: 'Home', url: '/' },
   { text: 'About', url: '/about' },
   { text: 'Portfolio', url: '/portfolio' },
+  { text: 'Offer', url: '/offer' },
 ];
 
 export default function Navigation() {
