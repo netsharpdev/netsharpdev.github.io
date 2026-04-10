@@ -17,3 +17,10 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+.worktrees/
+
+# Visual brainstorming companion
+.superpowers/
+
+# Local env files
+.env*
